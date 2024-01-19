@@ -1,0 +1,39 @@
+h1 {
+    text-align: center;
+}
+
+div[style*="width: 40%"] {
+    width: 40%;
+}
+
+div[style*="width: 90%"] {
+    width: 90%;
+    margin-top: 60%;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+ol {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style: inside;
+}
+
+ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style: upper-roman;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+div[style*="width: 100%"] {
+    float: right;
+    margin-bottom: 20px;
+}
