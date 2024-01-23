@@ -1,0 +1,38 @@
+
+/* Erik Hernandez, Build a Webpage Exercise, Part 4 */
+#container {
+    text-align: center;
+    color: darkred;
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10%;
+    border: 2px solid darkred; /* Dark red border around the image gallery */
+}
+
+.gallery-item {
+    text-align: center;
+    border-right: 2px solid darkred; /* Add this line for a right border on each gallery item */
+    padding: 10px; /* Add padding to separate content from borders */
+}
+
+/* Remove the right border from the last gallery item in each row */
+.gallery-item:nth-child(3n) {
+    border-right: none;
+}
+
+h1, h3, figcaption {
+    color: darkred;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+}
+
+/* Maximum width for images within the figure tag */
+figure img {
+    max-width: 100%; /* Adjust the value as needed */
+}
