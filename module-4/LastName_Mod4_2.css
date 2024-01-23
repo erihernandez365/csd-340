@@ -1,0 +1,23 @@
+#container {
+    text-align: center;
+    color: darkorange; /* Set the font color for the entire document */
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10%;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+h1, h3, figcaption {
+    color: darkorange; /* Set the font color for headers and captions */
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+}
