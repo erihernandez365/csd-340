@@ -1,0 +1,110 @@
+/* Erik Hernandez, Assignment: Build a Webpage Exercise, Part 6*/
+
+header {
+    background-color: darkorange;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 400;
+    color: white;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: midnightblue; /* Changed background color to midnight blue */
+    border-bottom: solid 2px grey;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #ffa500;
+}
+
+#container {
+    margin-top: 2%;
+    margin-left: 3%; /* Adjusted left margin to shift slightly to the left */
+    margin-right: 5%;
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border: 1px solid grey;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px; /* Add margin-bottom for spacing */
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: navy;
+    font-weight: 400;
+}
+
+.card-content {
+    padding: 2px 16px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: midnightblue; /* Changed background color to midnight blue */
+    position: fixed;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    bottom: 0;
+    text-align: left; /* Align text to the left */
+}
+
+footer p {
+    color: white;
+    font-weight: 400;
+    font-style: italic;
+    padding-left: 10px; /* Adjust padding */
+    display: inline; /* Display inline */
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#movies {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#movies th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+
+#movies td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
