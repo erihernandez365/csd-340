@@ -1,0 +1,63 @@
+/* Erik Hernandez, Assignment: JavaScript Exercise, Part 1 */
+
+/* Set the HTML and body font size to 16px */
+html, body {
+    font-size: 16px;
+}
+
+/* Give the paragraph text a weight of 400 */
+p {
+    font-weight: 400;
+}
+
+/* Give the h1 a weight of 700 */
+h1 {
+    font-weight: 700;
+    text-transform: uppercase; /* Make the h1 uppercase */
+    text-align: center; /* Center the text */
+}
+
+/* Give the h2 a weight of 500 */
+h2 {
+    font-weight: 500;
+    text-align: left; /* Align h2 text to the left */
+    padding-top: 15px; /* Add top padding to h2 */
+}
+
+/* Give the text in the paragraphs a line-height of 1.4em */
+p {
+    line-height: 1.4em;
+}
+
+/* Give the address a text alignment of center */
+address {
+    text-align: center;
+}
+
+/* Make the website URL bold with a font-size of 1.25em, font color of #4F3674, and remove the underline */
+address a {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #4F3674;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Apply rules to the hover and visited pseudo classes for the website link */
+address a:hover {
+    text-decoration: underline; /* Underline on hover */
+    background-color: #D6A800; /* Background color on hover */
+}
+
+address a:visited {
+    /* Styling for visited link (choose your own) */
+}
+
+/* Apply a font-style of italic to the CSS sentence class */
+.sentence {
+    font-style: italic;
+}
+
+/* Give the CSS "intro" class a text-indent of 2em */
+.intro {
+    text-indent: 2em;
+}
