@@ -1,0 +1,81 @@
+<!--- Erik Hernandez, Assignment: JavaScript Exercise, Part 3 --->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        hr {
+            border: 1px solid black;
+        }
+
+        #itemList {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #itemList li {
+            margin-bottom: 5px; /* Adjust margin for spacing between items */
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <p>This is an interactive To Do List. Type in your first item in the text box, then click Add. Click the Display button to see current items in the list. Click on Delete Last Entry if you'd like to remove the last entry.</p>
+    <input type="text" id="inputText">
+    <button onclick="addEntry()">Add</button>
+    <button onclick="deleteLastEntry()">Delete Last Entry</button>
+    <button onclick="displayEntries()">Display</button>
+    <hr>
+
+    <ul id="itemList">
+        /* List items will be added here */
+    </ul>
+
+    <hr>
+
+    <!-- Link back to index.html -->
+    <p><a href="https://erihernandez365.github.io/csd-340/">Back to Landing Page</a></p>
+
+    <script>
+        // JavaScript
+        let entries = ['Water Plants', 'Grade 310', 'Read book']; // Initial list of entries
+
+        // Call displayEntries() initially to populate the list
+        displayEntries();
+
+        // Function to add an entry to the array
+        function addEntry() {
+            let text = document.getElementById('inputText').value;
+            entries.push(text);
+            alert('Added: ' + text);
+            displayEntries(); // Call displayEntries() after adding an entry
+        }
+
+        // Function to delete the last entry from the array
+        function deleteLastEntry() {
+            if (entries.length > 0) {
+                let deletedEntry = entries.pop();
+                alert('Deleted: ' + deletedEntry);
+                displayEntries(); // Call displayEntries() after deleting an entry
+            } else {
+                alert('Array is empty');
+            }
+        }
+
+        // Function to display entries in order
+        function displayEntries() {
+            let itemList = document.getElementById('itemList');
+            itemList.innerHTML = ''; // Clear the existing list items
+
+            for (let i = 0; i < entries.length; i++) {
+                let listItem = document.createElement('li');
+                listItem.textContent = (i + 1) + '. ' + entries[i]; // Adjust numbering to start from 1
+                itemList.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+</html>
