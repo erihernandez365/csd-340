@@ -5,25 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSD 340 Web Development with HTML and CSS</title>
     <link rel="stylesheet" href="Hernandez_Mod12_2.css">
+    <script>
+        window.onload = function() {
+            var books = [
+                "Cosmos by Carl Sagan",
+                "The Martian by Andy Weir",
+                "The Art of Racing in the Rain by Garth Stein",
+                "My Life and Work by Henry Ford",
+                "Handbook of Psychological Assessment",
+                "The Real World by Kerry Ferris and Jill Stein",
+                "Cognitive Psychology by John J. Shaughnessy",
+                "The Communist Manifesto by Karl Marx",
+                "Bowling Alone by Robert D. Putnam",
+                "The Presentation of Self in Everyday Life by Erving Goffman"
+            ];
+
+            function displayAscending() {
+                books.sort();
+                displayBooks(books);
+            }
+
+            function displayDescending() {
+                books.sort().reverse();
+                displayBooks(books);
+            }
+
+            function displayBooks(bookArray) {
+                var list = document.getElementById("bookList");
+                list.innerHTML = "";
+                bookArray.forEach(function(book) {
+                    var listItem = document.createElement("li");
+                    listItem.textContent = book;
+                    list.appendChild(listItem);
+                });
+            }
+
+            document.getElementById("ascendingButton").onclick = displayAscending;
+            document.getElementById("descendingButton").onclick = displayDescending;
+        };
+    </script>
 </head>
 <body>
     <div id="container">
-        <h1 style="text-align: center;">Assignment 3.3: Build a Web Page Exercise - Part 3</h1>
+        <h1 style="text-align: center;">Assignment 12.2: JavaScript - Part 4</h1>
         
         <div style="width: 45%; float: left;">
             <h3 style="font-weight: 500;">Top 10 Favorite Books</h3>
-            <ol style="border: 1px solid red; border-radius: 15px; padding: 10px; list-style: inside;">
-                <li>Cosmos by Carl Sagan</li>
-                <li>The Martian by Andy Weir</li>
-		<li>The Art of Racing in the Rain by Garth Stein</li>
-		<li>My Life and Work by Henry Ford</li>
-		<li>Handbook of Psychological Assessment</li>
-		<li>The Real World by Kerry Ferris and Jill Stein</li>
-                <li>Cognitive Psychology by John J. Shaughnessy</li>
-		<li>The Communist Manifesto by Karl Marx</li>
-		<li>Bowling Alone by Robert D. Putnam</li>
-		<li>The Presentation of Self in Everyday Life by Erving Goffman</li>
+            <ol id="bookList" style="border: 1px solid red; border-radius: 15px; padding: 10px; list-style: inside;">
+                <!-- Book titles will be added dynamically here -->
             </ol>
+            <button id="ascendingButton">Top to Bottom</button>
+            <button id="descendingButton">Bottom to Top</button>
         </div>
 
         <div style="width: 45%; float: left;">
@@ -32,8 +64,8 @@
                 <li>Styling text effectively; like font choice, sizes, and colors</li>
                 <li>Understanding text alignment in CSS</li>
                 <li>Using floats and clearing elements</li>
-		<li>Creating hyperlinks in HTML using anchor tags with relative links</li>
-		<li>Creating ordered and unordered lists</li>
+                <li>Creating hyperlinks in HTML using anchor tags with relative links</li>
+                <li>Creating ordered and unordered lists</li>
             </ul>
         </div>
 
@@ -44,5 +76,3 @@
     </div>
 </body>
 </html>
-
-
