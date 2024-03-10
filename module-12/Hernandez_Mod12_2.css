@@ -1,14 +1,16 @@
+/* Erik Hernandez, Assignment: JavaScript Exercise, Part 4 */
+
 h1 {
     text-align: center;
 }
 
-div[style*="width: 40%"] {
-    width: 40%;
+.container {
+    width: 100%; /* Set the container's width to 100% */
 }
 
-div[style*="width: 90%"] {
-    width: 90%;
-    margin-top: 60%;
+.column {
+    width: 45%; /* Adjust the width of the columns */
+    float: left;
 }
 
 h3 {
@@ -33,7 +35,8 @@ a:hover {
     text-decoration: underline;
 }
 
-div[style*="width: 100%"] {
-    float: right;
-    margin-bottom: 20px;
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }

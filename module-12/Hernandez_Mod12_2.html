@@ -1,10 +1,19 @@
+<!-- Erik Hernandez, Assignment: JavaScript Exercise, Part 4 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSD 340 Web Development with HTML and CSS</title>
-    <link rel="stylesheet" href="Hernandez_Mod12_2.css">
+    <style>
+        #bookList {
+            list-style: none;
+            padding: 0;
+        }
+        #bookList li {
+            margin-bottom: 5px; /* Optional: Add some margin between list items */
+        }
+    </style>
     <script>
         window.onload = function() {
             var books = [
@@ -33,12 +42,15 @@
             function displayBooks(bookArray) {
                 var list = document.getElementById("bookList");
                 list.innerHTML = "";
-                bookArray.forEach(function(book) {
+                bookArray.forEach(function(book, index) {
                     var listItem = document.createElement("li");
-                    listItem.textContent = book;
+                    listItem.textContent = (index + 1) + ". " + book;
                     list.appendChild(listItem);
                 });
             }
+
+            // Call displayAscending() function when the window loads
+            displayAscending();
 
             document.getElementById("ascendingButton").onclick = displayAscending;
             document.getElementById("descendingButton").onclick = displayDescending;
@@ -51,9 +63,9 @@
         
         <div style="width: 45%; float: left;">
             <h3 style="font-weight: 500;">Top 10 Favorite Books</h3>
-            <ol id="bookList" style="border: 1px solid red; border-radius: 15px; padding: 10px; list-style: inside;">
+            <ul id="bookList" style="border: 1px solid red; border-radius: 15px; padding: 10px;">
                 <!-- Book titles will be added dynamically here -->
-            </ol>
+            </ul>
             <button id="ascendingButton">Top to Bottom</button>
             <button id="descendingButton">Bottom to Top</button>
         </div>
@@ -70,9 +82,9 @@
         </div>
 
         <div style="width: 100%; margin-top: 60%;">
-            <a href="index.html" style="float: right;">Back to Portal</a>
-            <a href="https://erihernandez365.github.io/csd-340/" style="float:left;">Back to Landing Page</a>
+            <a href="https://erihernandez365.github.io/csd-340/" style="float: right;">Back to Portal</a>
         </div>
     </div>
 </body>
 </html>
+
